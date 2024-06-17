@@ -151,9 +151,9 @@
     text-align: center; /* Centers the caption below the video */
     margin: 10px;
   }
-  video {
-    width: 320px; /* Fixed width */
-    height: 240px; /* Fixed height */
+  .fixed_video {
+    width: 480px; /* Fixed width */
+    height: 360px; /* Fixed height */
     display: block; /* Ensures the video doesn't have inline whitespace */
     margin: auto; /* Centers the video within its box */
   }
@@ -166,15 +166,15 @@
 <body>
 <div class="video-container">
   <div class="video-box">
-    <video poster="" id="tree" autoplay controls muted loop >
+    <video class = "fixed_video" poster="" id="tree" autoplay controls muted loop >
       <source src="static/videos/overview_sdp.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <div class="caption">Multitask evaluation SDP on MimicGen.</div>
   </div>
   <div class="video-box">
-    <video poster="" id="tree" autoplay controls muted loop >
-      <source src="static/videos/Sparsity of SDP.mp4" type="video/mp4">
+    <video class = "fixed_video" poster="" id="tree" autoplay controls muted loop >
+      <source src="static/videos/Sparsity_of_SDP.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <div class="caption">Sparsity of our SDP. During the inference, part of experts are activated.</div>
