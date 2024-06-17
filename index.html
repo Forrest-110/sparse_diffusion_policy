@@ -125,7 +125,7 @@
 
 
 <!--  Teaser video-->
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
@@ -136,9 +136,63 @@
       <h2 class="subtitle has-text-centered">
         Multitask evaluation SDP on MimicGen.
       </h2>
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/overview_sdp.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Multitask evaluation SDP on MimicGen.
+      </h2>
     </div>
   </div>
-</section>
+</section> -->
+
+
+<style>
+  .video-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Aligns videos vertically */
+    flex-wrap: wrap; /* Allows elements to wrap onto the next line */
+  }
+  .video-box {
+    text-align: center; /* Centers the caption below the video */
+    margin: 10px;
+  }
+  video {
+    width: 320px; /* Fixed width */
+    height: 240px; /* Fixed height */
+    display: block; /* Ensures the video doesn't have inline whitespace */
+    margin: auto; /* Centers the video within its box */
+  }
+  .caption {
+    font-size: 16px;
+    color: #333;
+  }
+</style>
+</head>
+<body>
+<div class="video-container">
+  <div class="video-box">
+    <video poster="" id="tree" autoplay controls muted loop >
+      <source src="static/videos/overview_sdp.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="caption">Caption for First Video</div>
+  </div>
+  <div class="video-box">
+    <video poster="" id="tree" autoplay controls muted loop >
+      <source src="static/videos/Sparsity of SDP.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="caption">Caption for Second Video</div>
+  </div>
+</div>
+</body>
+</html>
+
+
 <!-- End teaser video -->
 
 <!-- Paper abstract -->
