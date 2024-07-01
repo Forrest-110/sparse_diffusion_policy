@@ -157,6 +157,12 @@
     display: block; /* Ensures the video doesn't have inline whitespace */
     margin: auto; /* Centers the video within its box */
   }
+  .fixed_video_wider {
+    width: 720px; /* Fixed width */
+    height: 360px; /* Fixed height */
+    display: block; /* Ensures the video doesn't have inline whitespace */
+    margin: auto; /* Centers the video within its box */
+  }
   .caption {
     font-size: 16px;
     color: #333;
@@ -170,14 +176,14 @@
       <source src="static/videos/overview_sdp.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <div class="caption">Multitask evaluation SDP on MimicGen.</div>
+    <div class="caption"><b>Multitask - Simulation</b>.  Our <b>Sparse Diffusion Policy</b> (SDP) performs well across eight tasks: <i>Square</i>, <i>Stack</i>, <i>Coffee</i>, <i>Hammer</i>, <i>Mug</i>, <i>Nut</i>, <i>Stack Three</i>, and <i>Thread</i>.</div>
   </div>
   <div class="video-box">
     <video class = "fixed_video" poster="" id="tree" autoplay controls muted loop >
       <source src="static/videos/Sparsity_of_SDP.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <div class="caption">Sparsity of our SDP. During the inference, part of experts are activated.</div>
+    <div class="caption"><b>Sparsity of SDP</b>. During the inference, only some of the experts (in orange and pink) are activated.</div>
   </div>
 </div>
 </body>
@@ -209,13 +215,26 @@
     <div class="hero-body">
       <img src="static/images/teaser.png" alt="Description of image" style="width: 100%; height: auto;">
       <h2 class="subtitle has-text-centered">
-        Overview of Sparse Diffusion Policy (SDP).
+        Overview of Sparse Diffusion Policy (SDP). 1) Multitask Learning: SDP can simultaneously acquire experts from different demonstration datasets, activate task-specific experts to complish diverse robot tasks. 2) Continual Learning: SDP can continuously learn new tasks by adding only a few new experts without catastrophic forgetting by retaining the old experts and routers. 3) Task Transfer: SDP can freeze the parameter-rich experts and rapidly transfer to new tasks by only tuning lightweight routers for expert selection. Furthermore, SDP can acquire new skills based on the previously learned knowledge.
       </h2>
     </div>
   </div>
 </section>
 <!-- End new image section -->
  
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Multi-task in real-robot experiments.</h2>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
 <!--  Teaser video-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
@@ -226,7 +245,7 @@
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Multitask evaluation SDP on the real robot.
+        <b>Multitask - FANUC Robotic Arm</b>.
       </h2>
     </div>
   </div>
@@ -244,12 +263,31 @@
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Our SDP surpasses the baseline in real-robot experiments. The baseline struggles to capture sparse and multimodal action sequence distributions.
+        <b>Multitask - Comparison with TCD</b>. Our SDP surpasses the baseline, Task-Conditioned Diffusion (TCD), in real-robot experiments. The baseline struggles to capture sparse and multimodal action sequence distributions.
       </h2>
     </div>
   </div>
 </section>
 <!-- End teaser video -->
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Task Transfer</h2>
+        <div class="content has-text-justified">
+          <p>
+            We evaluate the reusability of the SDP, emphasizing its capability to leverage previously acquired experts and facilitate the learning of new skills by composing experts. Specifically, we pretrain the experts in <i>Coffee</i> and <i>Mug Cleanup</i>, freeze them, and only train the lightweight router in <i>Coffee Preparation</i>. With SDP, we find that experts learned from <i>Coffee</i> and <i>Mug Cleanup</i> can be <b>reused</b> in <i>Coffee Preparation</i>. It is particularly interesting to observe that whenever knowledge related to <i>Coffee</i> is required, but not seen in <i>Mug Cleanup</i>, the experts learned in <i>Coffee</i> are activated. Moreover, through compositing these experts, SDP can learn <b>new skills</b> such as moving mug to the coffee machine's drip tray. We slow down the video during these pivotal moments.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
 
 <!--  Teaser video-->
 <section class="hero teaser">
@@ -261,7 +299,7 @@
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Task Transfer: We evaluate the reusability of the SDP, emphasizing its capability to leverage previously acquired experts and to facilitate the learning of new skills by composing experts. Our SDP enables rapid task transfer through very lightweight router training.
+        <b>Task Transfer</b>. 
       </h2>
     </div>
   </div>
