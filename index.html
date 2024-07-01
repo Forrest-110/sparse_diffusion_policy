@@ -158,7 +158,7 @@
     margin: auto; /* Centers the video within its box */
   }
   .fixed_video_wider {
-    width: 600px; /* Fixed width */
+    width: 720px; /* Fixed width */
     height: 360px; /* Fixed height */
     display: block; /* Ensures the video doesn't have inline whitespace */
     margin: auto; /* Centers the video within its box */
@@ -176,10 +176,10 @@
       <source src="static/videos/overview_sdp.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <div class="caption"><b>Multitask - Simulation</b>.  Our <b>Sparse Diffusion Policy</b> (SDP) performs well across eight tasks: <i>Square</i>, <i>Stack</i>, <i>Coffee</i>, <i>Hammer</i>, <i>Mug</i>, <i>Nut</i>, <i>Stack Three</i>, and <i>Thread</i>.</div>
+    <div class="caption"><b>Multitask - Simulation</b>.  Our <b>Sparse Diffusion Policy</b> (SDP) performs well across eight tasks.</div>
   </div>
   <div class="video-box">
-    <video class = "fixed_video" poster="" id="tree" autoplay controls muted loop >
+    <video class = "fixed_video_wider" poster="" id="tree" autoplay controls muted loop >
       <source src="static/videos/Sparsity_of_SDP.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
@@ -214,9 +214,9 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <img src="static/images/teaser.png" alt="Description of image" style="width: 100%; height: auto;">
-      <div class="caption">
+      <h2 class="subtitle has-text-centered">
         Overview of Sparse Diffusion Policy (SDP). 1) Multitask Learning: SDP can simultaneously acquire experts from different demonstration datasets, activate task-specific experts to complish diverse robot tasks. 2) Continual Learning: SDP can continuously learn new tasks by adding only a few new experts without catastrophic forgetting by retaining the old experts and routers. 3) Task Transfer: SDP can freeze the parameter-rich experts and rapidly transfer to new tasks by only tuning lightweight routers for expert selection. Furthermore, SDP can acquire new skills based on the previously learned knowledge.
-      </div>
+      </h2>
     </div>
   </div>
 </section>
@@ -228,7 +228,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Multi-task in real-robot experiments.</h2>
+        <h2 class="title is-3">Real-robot experiment</h2>
       </div>
     </div>
   </div>
@@ -244,9 +244,9 @@
         <source src="static/videos/multitask-realrobot.mp4"
         type="video/mp4">
       </video>
-      <div class="caption">
+      <h2 class="subtitle has-text-centered">
         <b>Multitask - FANUC Robotic Arm</b>.
-      </div>
+      </h2>
     </div>
   </div>
 </section>
@@ -262,9 +262,9 @@
         <source src="static/videos/collapse.mp4"
         type="video/mp4">
       </video>
-      <div class="caption">
+      <h2 class="subtitle has-text-centered">
         <b>Multitask - Comparison with TCD</b>. Our SDP surpasses the baseline, Task-Conditioned Diffusion (TCD), in real-robot experiments. The baseline struggles to capture sparse and multimodal action sequence distributions.
-      </div>
+      </h2>
     </div>
   </div>
 </section>
@@ -298,9 +298,9 @@
         <source src="static/videos/novel_refine.mp4"
         type="video/mp4">
       </video>
-      <div class="caption">
+      <h2 class="subtitle has-text-centered">
         <b>Task Transfer</b>. 
-      </div>
+      </h2>
     </div>
   </div>
 </section>
