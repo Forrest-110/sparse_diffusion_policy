@@ -158,7 +158,7 @@
     margin: auto; /* Centers the video within its box */
   }
   .fixed_video_wider {
-    width: 720px; /* Fixed width */
+    width: 600px; /* Fixed width */
     height: 360px; /* Fixed height */
     display: block; /* Ensures the video doesn't have inline whitespace */
     margin: auto; /* Centers the video within its box */
@@ -214,9 +214,9 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <img src="static/images/teaser.png" alt="Description of image" style="width: 100%; height: auto;">
-      <h2 class="subtitle has-text-centered">
+      <div class="caption">
         Overview of Sparse Diffusion Policy (SDP). 1) Multitask Learning: SDP can simultaneously acquire experts from different demonstration datasets, activate task-specific experts to complish diverse robot tasks. 2) Continual Learning: SDP can continuously learn new tasks by adding only a few new experts without catastrophic forgetting by retaining the old experts and routers. 3) Task Transfer: SDP can freeze the parameter-rich experts and rapidly transfer to new tasks by only tuning lightweight routers for expert selection. Furthermore, SDP can acquire new skills based on the previously learned knowledge.
-      </h2>
+      </div>
     </div>
   </div>
 </section>
@@ -244,9 +244,9 @@
         <source src="static/videos/multitask-realrobot.mp4"
         type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered">
+      <div class="caption">
         <b>Multitask - FANUC Robotic Arm</b>.
-      </h2>
+      </div>
     </div>
   </div>
 </section>
@@ -262,9 +262,9 @@
         <source src="static/videos/collapse.mp4"
         type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered">
+      <div class="caption">
         <b>Multitask - Comparison with TCD</b>. Our SDP surpasses the baseline, Task-Conditioned Diffusion (TCD), in real-robot experiments. The baseline struggles to capture sparse and multimodal action sequence distributions.
-      </h2>
+      </div>
     </div>
   </div>
 </section>
@@ -298,9 +298,9 @@
         <source src="static/videos/novel_refine.mp4"
         type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered">
+      <div class="caption">
         <b>Task Transfer</b>. 
-      </h2>
+      </div>
     </div>
   </div>
 </section>
